@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "medic-search"
+version = "0.1.0"
+description = "零依赖医疗信息本地全文检索工具，纯 Python 标准库实现，支持中英文检索、正则、上下文高亮"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.7"
+authors = [
+    {name = "lh187git"},
+]
+keywords = [
+    "search", "fulltext", "medical", "knowledge-base",
+    "cli", "no-dependency", "fts", "sqlite",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Healthcare Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+# 零第三方依赖！
+dependencies = []
+
+[project.scripts]
+medic = "medic:main"
+
+[project.urls]
+Homepage = "https://github.com/lh187git/medic"
+Repository = "https://github.com/lh187git/medic"
+
+[tool.setuptools]
+py-modules = ["medic"]
